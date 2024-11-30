@@ -27,6 +27,116 @@ section{
   	min-height: 100vh; /* Ensure sections take at least the full height of the viewport */
 
 }
+/* Basic Navbar Styles */
+.navbar {
+    background-color: #5900ff;  /* Purple background for navbar */
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu li {
+    margin-right: 1.5rem;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+/* Styles for Mobile Menu */
+.toggle {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;  /* Hide toggle button by default */
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .toggle {
+        display: block; /* Show toggle button on small screens */
+    }
+
+    .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #5900ff;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .menu.active {
+        display: flex;
+    }
+
+    .menu li {
+        margin-bottom: 1rem;
+    }
+
+    .menu a {
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+/* Ensure the "About RA Team" button is responsive */
+#about-ra-team {
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.75rem;
+    border-radius: 4px;
+    color: white;
+    text-decoration: none;
+    background-color: #5900ff;  /* Match the navbar color */
+}
+
+#about-ra-team:hover {
+    background-color: #ffcc00; /* Change color on hover */
+}
+
+/* Adjust for mobile view to keep spacing uniform */
+@media (max-width: 768px) {
+    .menu li {
+        margin-right: 0;
+    }
+
+    .menu li a {
+        padding: 1rem;
+        font-size: 1.1rem;
+    }
+}
 
 
 #home{
