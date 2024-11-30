@@ -15,8 +15,11 @@
 
 		<ul class="menu">
 			<li><a href="#home" onclick="toggleMenu()";>Home</a></li>
-			<li><a href="#about" onclick="toggleMenu()";>About</a></li>
+			<li><a href="#about-ra-team" onclick="toggleMenu()">About RA Team</a></li>
+			<li><a href="#about" onclick="toggleMenu()";>My Story</a></li>
+			<li><a href="#donation" class="donate-btn" onclick="toggleMenu()">Donate</a></li>
 			<li><a href="#contact" onclick="toggleMenu()";>Contact</a></li>
+
 		</ul>
 	</nav>
 
@@ -37,10 +40,50 @@
 		</div>
 	</section>
 
+
+	<section id="about-ra-team">
+    <div class="heading">
+        <h2>About RA Team</h2>
+        <p>Get to know some interesting facts about our amazing team!</p>
+    </div>
+    
+    <!-- Container for sticky notes -->
+    <div class="sticky-notes">
+        <div class="sticky-note">
+            <h3>Fact 1</h3>
+            <p>We work together to make magic happen every day.</p>
+        </div>
+        <div class="sticky-note">
+            <h3>Fact 2</h3>
+            <p>Our team is diverse, with talents in design, coding, and marketing.</p>
+        </div>
+        <div class="sticky-note">
+            <h3>Fact 3</h3>
+            <p>We are passionate about helping others with our work.</p>
+        </div>
+        <div class="sticky-note">
+            <h3>Fact 4</h3>
+            <p>We love collaborating and sharing ideas to improve.</p>
+        </div>
+        <div class="sticky-note">
+            <h3>Fact 5</h3>
+            <p>Innovation is at the heart of everything we do.</p>
+        </div>
+        <div class="sticky-note">
+            <h3>Fact 6</h3>
+            <p>We always strive to learn and grow together.</p>
+        </div>
+    </div>
+</section>
+
+	
+
+
+
 	<section id="about">
 		<div class="heading">
-			<h2>About</h2>
-			<p>My Introduction</p>	
+			<h2>My Story</h2>
+			<p>A brief summary of my life</p>	
 		</div>
 
 		<div class="about-content">
@@ -56,25 +99,27 @@
 	</section>
 
 	<section id="donation">
-    <div class="heading color">
-        <h2>Support Us</h2>
-        <p>Your donation helps us continue our work and improve.</p>
-    </div>
+    	<div class="heading">
+        	<h2>Support Us</h2>
+        	<p>Your generosity makes all the difference in helping us achieve our mission!</p>
+    	</div>
 
-    <div class="donation-content">
-        <div class="donation-text">
-            <h1>Make a Donation</h1>
-            <p>Your support enables us to keep improving and providing top-notch racing experiences. Whether it’s a one-time donation or a monthly contribution, every little bit counts. Thank you for your generosity!</p>
-        </div>
-        <div class="donation-form">
-            <form action="donation_process.php" method="POST">
-                <input type="text" placeholder="Full Name" required>
-                <input type="email" placeholder="Your E-mail" required>
-                <input type="number" placeholder="Donation Amount" required>
-                <input type="submit" value="Donate Now" class="donation-button">
-            </form>
-        </div>
-    </div>
+    <!-- Donation Content -->
+    	<div class="donation-content">
+        <!-- More text for the donation section -->
+        	<p class="donation-description">
+            By donating, you support our efforts in creating impactful change. We appreciate every contribution, no matter the size. Your support helps us continue the work that matters to so many.
+        	</p>
+
+        <!-- PayPal Donation Button -->
+        	<form action="https://www.paypal.com/ncp/payment/5FZ33HW4CHSDJ" method="post" target="_top" class="paypal-form">
+            	<input class="paypal-button" type="submit" value="Donate" />
+            	<img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" class="paypal-cards" />
+            	<section class="paypal-powered">
+                	Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" class="paypal-logo" />
+            	</section>
+        	</form>
+    	</div>
 	</section>
 
 
