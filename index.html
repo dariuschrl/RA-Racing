@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<meta hhtp-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 	<title>RA Racing</title>
 	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet"
-  href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 </head>
 <body>
 	<nav>
@@ -63,14 +62,11 @@
 		</div>
 
 		<div class="contact-content">
-			<!--<div class="app">
-				<h1>Connect With Us <br> By Our Apps</h1>
-			</div>-->
 			<div class="contact-form">
-				<form action="">
+				<form action="send_email.php" method="POST">
 					<input type="text" placeholder="Name">
 					<input type="email" placeholder="Your E-mail">
-					<textarea name="" id="" cols="30" rows="10" placeholder="Your Message Here..."></textarea>
+					<textarea name="message" id="" cols="30" rows="10" placeholder="Your Message Here..."></textarea>
 					<input type="button" value="Send" class="contact-button">
 				</form>
 
