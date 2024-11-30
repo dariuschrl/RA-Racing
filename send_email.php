@@ -1,26 +1,32 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $to = "contact@raracing.com";  // recipient email
-    $subject = "New Contact Form Submission";
+<script type="text/javascript">
+    // Select the contact form
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();  // Prevent the default form submission (page reload)
 
-    // Get form data
-    $name = htmlspecialchars($_POST['name']);
-    $email = htmlspecialchars($_POST['email']);
-    $message = htmlspecialchars($_POST['message']);
+        var form = event.target; // Get the form element
+        var data = new FormData(form); // Create FormData object to send form data
 
-    // Create the email content
-    $body = "Name: $name\nEmail: $email\n\nMessage:\n$message";
+        // Create a new XMLHttpRequest object to send the form data to PHP
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'send_email.php', true);
+        
+        // When the request finishes, execute this function
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                var response = xhr.responseText; // Get the response from PHP
+                
+                if (response === "Message sent successfully.") {
+                    alert('Message sent successfully!');
+                    form.reset(); // Clear all input fields after sending the email
+                } else {
+                    alert('Error sending message. Please try again later.');
+                }
+            } else {
+                alert('There was an error with the request.');
+            }
+        };
 
-    // Set email headers
-    $headers = "From: $email" . "\r\n" .
-               "Reply-To: $email" . "\r\n" .
-               "Content-Type: text/plain; charset=UTF-8";
-
-    // Send email
-    if (mail($to, $subject, $body, $headers)) {
-        echo "Message sent successfully.";
-    } else {
-        echo "Error sending message.";
-    }
-}
-?>
+        // Send the form data to the PHP server
+        xhr.send(data);
+    });
+</script>
