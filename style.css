@@ -28,8 +28,8 @@ section{
 
 }
 /* Basic Navbar Styles */
-.navbar {
-    background-color: #5900ff;  /* Purple background for navbar */
+nav {
+    background-color: #5900ff;  /* Adjust color as needed */
     padding: 1rem;
     position: fixed;
     top: 0;
@@ -37,12 +37,27 @@ section{
     z-index: 1000;
 }
 
-.navbar-container {
+.logo-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Space between logo and toggle button */
     align-items: center;
 }
 
+.logo {
+    width: 15%;  /* Adjust percentage to fit the design */
+    max-width: 150px;  /* Ensure logo does not exceed 150px */
+    height: auto;  /* Maintain aspect ratio */
+    transition: width 0.3s ease;  /* Smooth transition for resizing */
+}
+
+.toggle {
+    display: none;  /* Hidden by default, visible on mobile */
+    cursor: pointer;
+    color: white;
+    font-size: 2rem;  /* Larger size for the toggle icon */
+}
+
+/* Menu styles */
 .menu {
     display: flex;
     list-style: none;
@@ -65,8 +80,60 @@ section{
 }
 
 .menu a:hover {
-    color: #ffcc00; /* Change color on hover */
+    color: #ffcc00; /* Change hover color */
 }
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .logo-container {
+        flex-direction: row;  /* Ensure logo stays on the left */
+        justify-content: space-between;  /* Align logo on left and toggle on right */
+    }
+
+    .logo {
+        width: 30%;  /* Adjust logo size on mobile */
+        max-width: 100px;  /* Ensure logo doesn’t get too large */
+    }
+
+    .toggle {
+        display: block;  /* Show toggle on small screens */
+    }
+
+    .menu {
+        display: none;  /* Hide menu by default */
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #5900ff;
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .menu.active {
+        display: flex;  /* Show menu when active */
+    }
+
+    .menu li {
+        margin-bottom: 1rem;
+    }
+
+    .menu a {
+        padding: 1rem;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 
 /* Styles for Mobile Menu */
 .toggle {
