@@ -44,7 +44,7 @@ nav {
 }
 
 .logo {
-    width: 15%;  /* Adjust percentage to fit the design */
+    width: 150px;  /* Adjust percentage to fit the design */
     max-width: 150px;  /* Ensure logo does not exceed 150px */
     height: auto;  /* Maintain aspect ratio */
     transition: width 0.3s ease;  /* Smooth transition for resizing */
@@ -91,7 +91,7 @@ nav {
     }
 
     .logo {
-        width: 30%;  /* Adjust logo size on mobile */
+        width: 50px;  /* Adjust logo size on mobile */
         max-width: 100px;  /* Ensure logo doesn’t get too large */
     }
 
@@ -189,9 +189,7 @@ nav {
     background-color: #5900ff;  /* Match the navbar color */
 }
 
-#about-ra-team:hover {
-    background-color: #ffcc00; /* Change color on hover */
-}
+
 
 /* Adjust for mobile view to keep spacing uniform */
 @media (max-width: 768px) {
