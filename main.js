@@ -55,3 +55,15 @@ sr.reveal('.form textarea', {});
 sr.reveal('.contact-form', { delay: 200 });
 
 sr.reveal('#donation', { delay: 200 });
+
+
+sr.reveal('.sticky-note', {
+    origin: 'left',  // Reveal from left
+    distance: '100px', // Move 100px from the left
+    delay: 300,  // Delay for the sticky notes
+    duration: 1000, // Animation duration
+    interval: 200, // Delay between each note's animation
+    opacity: 0, // Start hidden
+    scale: 0.8, // Slightly scale the sticky notes
+    easing: 'ease-out', // Easing function for smoothness
+});
