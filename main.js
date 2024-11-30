@@ -5,37 +5,33 @@ function toggleMenu() {
     menu.classList.toggle('active');
 }
 
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault();  // Prevent the default form submission (page reload)
+document.getElementById('contact-form').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevent the default form submission behavior.
 
-    var form = event.target; // Get the form element
-    var data = new FormData(form); // Create FormData object to send form data
+    var form = event.target; // Get the form element.
+    var formData = new FormData(form); // Collect form data.
 
-    // Create a new XMLHttpRequest object to send the form data to PHP
-    var xhr = new XMLHttpRequest();
-    xhr.open('POST', 'send_email.php', true);
-    
-    // When the request finishes, execute this function
-    xhr.onload = function() {
-        if (xhr.status === 200) {
-            var response = xhr.responseText; // Get the response from PHP
-            
-            if (response === "Message sent successfully.") {
-                alert('Message sent successfully!');
-                form.reset(); // Clear all input fields after sending the email
-            } else {
-                alert('Error sending message. Please try again later.');
-            }
+    // Send data to Formspree
+    try {
+        const response = await fetch('https://formspree.io/f/mpwzobde', {
+            method: 'POST',
+            headers: { 'Accept': 'application/json' },
+            body: formData
+        });
+
+        if (response.ok) {
+            alert('Message sent successfully!');
+            form.reset(); // Reset the form fields.
         } else {
-            alert('There was an error with the request.');
+            alert('Error sending message. Please try again.');
         }
-    };
-
-    // Send the form data to the PHP server
-    xhr.send(data);
+    } catch (error) {
+        console.error('Error:', error);
+        alert('There was an error connecting to the server. Please try again.');
+    }
 });
 
-
+// ScrollReveal Animations
 const sr = ScrollReveal({
     origin: 'top',
     distance: '85px',
@@ -56,14 +52,13 @@ sr.reveal('.contact-form', { delay: 200 });
 
 sr.reveal('#donation', { delay: 200 });
 
-
 sr.reveal('.sticky-note', {
-    origin: 'left',  // Reveal from left
-    distance: '100px', // Move 100px from the left
-    delay: 300,  // Delay for the sticky notes
-    duration: 1000, // Animation duration
-    interval: 200, // Delay between each note's animation
-    opacity: 0, // Start hidden
-    scale: 0.8, // Slightly scale the sticky notes
-    easing: 'ease-out', // Easing function for smoothness
+    origin: 'left',
+    distance: '100px',
+    delay: 300,
+    duration: 1000,
+    interval: 200,
+    opacity: 0,
+    scale: 0.8,
+    easing: 'ease-out'
 });
