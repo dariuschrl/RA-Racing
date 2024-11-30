@@ -8,8 +8,9 @@
 	text-decoration: none;
 	box-sizing: border-box;
 	scroll-behavior: smooth;
-
 }
+
+
 
 :root{
 	--main-color: #FA812F;
@@ -18,6 +19,11 @@
 section{
 	padding: 100px;
 }
+@viewport {
+  width: device-width;
+  zoom: 1.0;
+}
+
 #home{
 	position: relative;
 	width: 100%;
@@ -25,6 +31,7 @@ section{
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
+	flex-direction: column;
 }
 
 nav{
