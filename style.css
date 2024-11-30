@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+html, body {
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;  /* Prevent horizontal scrolling */
+}
 *{
 	margin: 0;
 	padding: 0;
@@ -18,20 +22,23 @@
 }
 section{
 	padding: 100px;
+	width: 100%;
+  	box-sizing: border-box;
+  	min-height: 100vh; /* Ensure sections take at least the full height of the viewport */
+
 }
-@viewport {
-  width: device-width;
-  zoom: 1.0;
-}
+
 
 #home{
 	position: relative;
 	width: 100%;
-	height: 100vh;
+	min-height: 100vh;
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	align-items: center;
-	
+	padding: 0 10px; /* Prevent overflow */
+	padding-top: 80px;
+
 }
 
 nav{
@@ -72,6 +79,8 @@ ul li a:hover {
 
 .home-text {
 	max-width: 500px;
+	margin-bottom: 2rem;
+  	padding-bottom: 30px;  /* Add padding to the bottom to prevent overlap */
 }
 .home-text h1 {
 	color: var(--second-color);
@@ -100,6 +109,10 @@ ul li a:hover {
 	border-radius: 10px;
 	font-weight: 600;
 	letter-spacing: 1px;
+	text-align: center;
+  	display: inline-block;
+  	margin-top: 1rem; /* Add some margin for better spacing */
+  	z-index: 1;
 }
 .home-text a:hover {
 	background: var(--second-color);
@@ -109,7 +122,10 @@ ul li a:hover {
 	position: absolute;
 	display: flex;
 	bottom: 8%;
-	left: 144px;
+	left: 50%;
+	justify-content: center; /* Center the icons horizontally */
+  	gap: 20px; /* Add space between icons */
+  	z-index: 2;  /* Ensure social icons stay above content */
 }
 .social i {
 	margin-right: 24px;
@@ -291,8 +307,19 @@ ul li a:hover {
 		height: 400px;
 
 	}
+	.home-text a {
+    	padding: 10px 20px;
+    	font-size: 1rem;
+    	width: 90%;  /* Make button fit on small screens */
+    	margin-top: 1.5rem;
+  	}
 	.social{
-		left: 110px;
+		position: absolute;
+    	bottom: 5%;
+    	left: 50%;
+    	transform: translateX(-50%);  /* Center social icons */
+    	gap: 15px;
+    	z-index: 2;
 	}
 	.heading h2 {
 		font-size: 1.6rem;
@@ -323,10 +350,31 @@ ul li a:hover {
 		padding: 35px;
 	}
 }
+
+@media (max-width: 600px) {
+  .home-text a {
+    padding: 10px 20px;  /* Reduce padding */
+    font-size: 1rem;  /* Adjust font size */
+    width: 100%;  /* Make the button take up the full width */
+    text-align: center;  /* Center the text */
+    margin-top: 1.5rem;  /* Adjust top margin */
+  }
+  .social {
+    bottom: 3%;  /* Move social icons higher up to prevent overlap */
+    gap: 10px;
+  }
+}
+
 @media (max-width:360px){
 	section{
 		padding: 35px;
 	}
+	.home-text a {
+    	padding: 8px 16px;  /* Further reduce padding on very small screens */
+    	font-size: 0.9rem;  /* Make the font smaller */
+    	width: 90%;  /* Make the button slightly smaller but still centered */
+    	margin-top: 1rem;  /* Reduce the margin */
+  	}
 	#home{
 		flex-direction: column;
 	}
@@ -364,4 +412,8 @@ ul li a:hover {
 	.contact-form{
 		width: 300px;
 	}
+	.social {
+    bottom: 2%;  /* Adjust social icons further for very small screens */
+    gap: 10px;
+  }
 }
