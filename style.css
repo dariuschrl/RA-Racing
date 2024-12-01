@@ -334,7 +334,7 @@ ul li a:hover {
 
 }
 #about .heading h2 {
-  margin-top: 40px; /* Add space to push the title lower */
+  margin-top: 65px; /* Add space to push the title lower */
   color: var(--second-color);
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -424,7 +424,7 @@ ul li a:hover {
   background: var(--second-color);
 }
 #contact .heading h2 {
-  margin-top: 50px; /* Add space to push the title lower */
+  margin-top: 65px; /* Add space to push the title lower */
   font-size: 2.5rem;
   margin-bottom: 1rem;
   position: relative;
