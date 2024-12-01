@@ -1,40 +1,140 @@
 function toggleMenu() {
-    var menuToggle = document.querySelector('.toggle');
-    var menu = document.querySelector('.menu');
+    const menuToggle = document.querySelector('.toggle');
+    const menu = document.querySelector('.menu');
     menuToggle.classList.toggle('active');
     menu.classList.toggle('active');
+    
+    // Prevent scrolling when menu is open
+    document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : 'auto';
 }
 
+// Close menu when clicking outside
+document.addEventListener('click', function(e) {
+    const menu = document.querySelector('.menu');
+    const toggle = document.querySelector('.toggle');
+    
+    if (menu.classList.contains('active') && 
+        !menu.contains(e.target) && 
+        !toggle.contains(e.target)) {
+        toggleMenu();
+    }
+});
 
-
-// ScrollReveal Animations
+// Initialize ScrollReveal with extended reveal configuration
 const sr = ScrollReveal({
-    origin: 'top',
-    distance: '85px',
-    duration: 2000,
+    origin: 'bottom',
+    distance: '60px',
+    duration: 1200,
+    delay: 300,
+    easing: 'ease-out',
     reset: true
 });
 
-sr.reveal('.home-text', {});
-sr.reveal('.home-img', { delay: 200 });
-sr.reveal('.social', { delay: 200 });
-
-sr.reveal('.about-img', {});
-sr.reveal('.heading', {});
-sr.reveal('.about-text', { delay: 200 });
-
-sr.reveal('.form textarea', {});
-sr.reveal('.contact-form', { delay: 200 });
-
-sr.reveal('#donation', { delay: 200 });
-
-sr.reveal('.sticky-note', {
+// Home Section Animations
+sr.reveal('#home .home-text h1', {
     origin: 'left',
-    distance: '100px',
-    delay: 300,
-    duration: 1000,
+    delay: 500
+});
+
+sr.reveal('#home .home-text a', {
+    origin: 'bottom',
+    delay: 600
+});
+
+sr.reveal('#home .home-img', {
+    origin: 'right',
+    delay: 700
+});
+
+sr.reveal('#home .social a', {
+    origin: 'bottom',
+    interval: 100,
+    delay: 800
+});
+
+// About RA Team Section
+sr.reveal('#about-ra-team .heading', {
+    origin: 'top',
+    delay: 500
+});
+
+sr.reveal('#about-ra-team .sticky-notes .sticky-note', {
+    origin: 'bottom',
     interval: 200,
-    opacity: 0,
-    scale: 0.8,
-    easing: 'ease-out'
+    delay: 600
+});
+
+// My Story (About) Section
+sr.reveal('#about .heading', {
+    origin: 'top',
+    delay: 500
+});
+
+sr.reveal('#about .about-img', {
+    origin: 'left',
+    delay: 600
+});
+
+sr.reveal('#about .about-text', {
+    origin: 'right',
+    delay: 700,
+    interval: 200  // Add interval to text paragraphs
+});
+
+// Donation Section
+sr.reveal('#donation .heading', {
+    origin: 'top',
+    delay: 500
+});
+
+sr.reveal('#donation .donation-content', {
+    origin: 'bottom',
+    delay: 600,
+    interval: 200  // Add interval to donation elements
+});
+
+sr.reveal('#donation .paypal-form', {
+    origin: 'bottom',
+    delay: 700
+});
+
+// Contact Section
+sr.reveal('#contact .heading', {
+    origin: 'top',
+    delay: 500
+});
+
+sr.reveal('#contact .contact-content', {
+    origin: 'bottom',
+    delay: 600
+});
+
+sr.reveal('#contact .contact-form input', {
+    origin: 'bottom',
+    interval: 200,
+    delay: 700
+});
+
+sr.reveal('#contact .contact-form textarea', {
+    origin: 'bottom',
+    delay: 800
+});
+
+sr.reveal('#contact .contact-button', {
+    origin: 'bottom',
+    delay: 900
+});
+
+// Add smooth scrolling for anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
 });
