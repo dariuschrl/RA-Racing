@@ -8,15 +8,17 @@ function toggleMenu() {
 document.getElementById('contact-form').addEventListener('submit', async function(event) {
     event.preventDefault(); // Prevent the default form submission behavior.
 
-    var form = event.target; // Get the form element.
-    var formData = new FormData(form); // Collect form data.
+    const form = event.target; // Get the form element.
+    const formData = new FormData(form); // Collect form data.
 
-    // Send data to Formspree
+    // Convert FormData to JSON
+    const formObject = Object.fromEntries(formData.entries());
+
     try {
-        const response = await fetch('https://formspree.io/f/mpwzobde', {
+        const response = await fetch('http://localhost:8000/send_email', {
             method: 'POST',
-            headers: { 'Accept': 'application/json' },
-            body: formData
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(formObject) // Send form data as JSON
         });
 
         if (response.ok) {
