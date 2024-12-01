@@ -5,33 +5,7 @@ function toggleMenu() {
     menu.classList.toggle('active');
 }
 
-document.getElementById('contact-form').addEventListener('submit', async function(event) {
-    event.preventDefault(); // Prevent the default form submission behavior.
 
-    const form = event.target; // Get the form element.
-    const formData = new FormData(form); // Collect form data.
-
-    // Convert FormData to JSON
-    const formObject = Object.fromEntries(formData.entries());
-
-    try {
-        const response = await fetch('http://localhost:8000/send_email', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(formObject) // Send form data as JSON
-        });
-
-        if (response.ok) {
-            alert('Message sent successfully!');
-            form.reset(); // Reset the form fields.
-        } else {
-            alert('Error sending message. Please try again.');
-        }
-    } catch (error) {
-        console.error('Error:', error);
-        alert('There was an error connecting to the server. Please try again.');
-    }
-});
 
 // ScrollReveal Animations
 const sr = ScrollReveal({
