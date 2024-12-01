@@ -72,16 +72,46 @@ nav {
 .menu a {
     text-decoration: none;
     color: white;
-    font-size: 1rem;
+    font-size: 1rem; /* Adjust font size as needed */
     font-weight: bold;
     text-transform: uppercase;
     padding: 0.5rem;
     transition: color 0.3s ease;
 }
-
+.logo + a {
+    font-size: 1rem; /* Match the size of other navigation links */
+    font-weight: bold; /* Ensure the font weight matches */
+    text-transform: uppercase; /* Optional: enforce uppercase to match style */
+    margin-left: 10px; /* Add spacing between logo and text if needed */
+}
+.menu-link {
+    text-decoration: none;
+    color: black;
+    font-size: 1rem; /* Match other nav items */
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
 .menu a:hover {
     color: #ffcc00; /* Change hover color */
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Mobile View */
 @media (max-width: 768px) {
@@ -577,14 +607,14 @@ ul li a:hover {
 	.toggle{
 		width: 40px;
 		height: 40px;
-		background: url(menu.png);
+		background: url(assets/menu.png);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 30px;
 		cursor: pointer;
 	}
 	.toggle.active{
-		background: url(close.png);
+		background: url(assets/close.png);
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: 25px;
