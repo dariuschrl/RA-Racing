@@ -12,7 +12,8 @@
 	 <nav>
         <div class="logo-container">
             <!-- Logo on the left -->
-            <a href="#"><img src="logo1.png" alt="RA Racing Logo" class="logo"></a>
+            <a href="#"><img src="assets/logo1.png" alt="RA Racing Logo" class="logo"></a>
+            <a href="#" class="menu-link">RA Racing</a>
             <!-- Toggle button for mobile -->
             <div class="toggle" onclick="toggleMenu();"></div>
         </div>
@@ -31,12 +32,12 @@
 			<a href="#about">Learn More</a>
 		</div>
 		<div class="home-img">
-			<img src="a1.png" alt="">
+			<img src="assets/a1.png" alt="">
 		</div>
 
 		<div class="social">
 			<a href="https://www.instagram.com/raracingromania/"><i class='bx bxl-instagram-alt'></a></i>
-			<a href="#"><i class='bx bxl-facebook' ></a></i>
+			<a href="https://www.facebook.com/people/RA-Racing/61569984414608/?mibextid=ZbWKwL"><i class='bx bxl-facebook' ></a></i>
 			<a href="mailto: contact@raracing.com"><i class='bx bxs-envelope' ></a></i>
 			
 		</div>
@@ -90,7 +91,7 @@
 
 		<div class="about-content">
 			<div class="about-img">
-				<img src="a2.png" alt="">
+				<img src="assets/a2.png" alt="">
 			</div>
 			<div class="about-text">
 				<h1>This is my story..</h1>
@@ -132,7 +133,8 @@
 
     <div class="contact-content">
         <div class="contact-form">
-            <form id="contact-form">
+            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            	<input type="hidden" name="access_key" value="6db80b47-b85c-4acc-8f47-192450dc4246">
                 <input type="text" name="name" placeholder="Name" required>
                 <input type="email" name="email" placeholder="Your E-mail" required>
                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message Here..." required></textarea>
@@ -142,40 +144,7 @@
     </div>
 </section>
 
-<script>
-    document.getElementById("contact-form").addEventListener("submit", async function (event) {
-        event.preventDefault(); // Prevent default form submission behavior
 
-        const form = event.target;
-        const formData = new FormData(form);
-
-        // Spam detection using honeypot
-        if (formData.get("honeypot")) {
-            document.getElementById("response-message").textContent = "Submission blocked due to spam detection.";
-            return;
-        }
-
-        try {
-            const response = await fetch(form.action, {
-                method: "POST",
-                headers: { "Accept": "application/json" },
-                body: formData
-            });
-
-            if (response.ok) {
-                document.getElementById("response-message").textContent = "Thank you! Your message has been sent.";
-                form.reset(); // Clear the form
-            } else {
-                document.getElementById("response-message").textContent =
-                    "Oops! There was a problem with your submission. Please try again later.";
-            }
-        } catch (error) {
-            console.error("Error submitting form:", error);
-            document.getElementById("response-message").textContent =
-                "There was an error connecting to the server. Please try again.";
-        }
-    });
-</script>
 
 	<div class="copyright">
 		<p>&#169; RA Racing All Rights Reserved</p>
