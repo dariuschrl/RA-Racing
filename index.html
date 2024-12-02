@@ -1,170 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-	<title>RA Racing</title>
-	<link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-	<script src="https://unpkg.com/scrollreveal@4.0.9/dist/scrollreveal.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RA Racing - Darius Chirila Racing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <meta name="description" content="Official website of Darius Chirila, professional race car driver">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 </head>
 <body>
-	 <nav>
+    <nav>
         <div class="logo-container">
-            <!-- Logo on the left -->
-            <a href="#"><img src="assets/logo1.png" alt="RA Racing Logo" class="logo"></a>
-            <a href="#" class="menu-link">RA Racing</a>
-            <!-- Toggle button for mobile -->
-            <div class="toggle" onclick="toggleMenu();"></div>
+            <a href="#home" aria-label="Home">
+                <img src="assets/logo2.png" alt="RA Racing Official Logo" class="logo image-fade-in fade-in-element">
+            </a>
+            <a href="#home" class="menu-link">RA Racing</a>
+            <button class="toggle" aria-label="Toggle Navigation Menu" onclick="toggleMenu()">
+                <img src="assets/menu.png" alt="Menu Toggle" class="menu-icon">
+            </button>
         </div>
         <ul class="menu">
-            <li><a href="#home" onclick="toggleMenu()">Home</a></li>
-            <li><a href="#about-ra-team" onclick="toggleMenu()">About RA Racing</a></li>
-            <li><a href="#about" onclick="toggleMenu()">My Story</a></li>
-            <li><a href="#donation" class="donate-btn" onclick="toggleMenu()">Donate</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about-ra-team">About RA Racing</a></li>
+            <li><a href="#about">My Story</a></li>
+            <li><a href="#donation" class="donate-btn">Donate</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
-	<section id="home">
-		<div class="home-text">
-			<h1>Hi, my name is <br>Darius <span>Chirila</span><br>Race Car Driver</h1>
-			<a href="#about">Learn More</a>
-		</div>
-		<div class="home-img">
-			<img src="assets/a1.png" alt="">
-		</div>
+    <main>
+        <section id="home">
+            <div class="home-text">
+                <h1>Hi, my name is <br>Darius <span>Chirila</span><br>Race Car Driver</h1>
+                <a href="#about" class="cta-button btn-fade-in fade-in-element">Learn More</a>
+            </div>
+            <div class="home-img">
+                <img src="assets/home.png" alt="Darius Chirila" class="image-fade-in fade-in-element">
+                <div class="social">
+                    <a href="https://www.instagram.com/raracingromania/" aria-label="Instagram">
+                        <i class="bx bxl-instagram-alt"></i>
+                    </a>
+                    <a href="https://www.facebook.com/people/RA-Racing/61569984414608/" aria-label="Facebook">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+                    <a href="mailto:contact@raracing.com" aria-label="Email">
+                        <i class="bx bxs-envelope"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
 
-		<div class="social">
-			<a href="https://www.instagram.com/raracingromania/"><i class='bx bxl-instagram-alt'></a></i>
-			<a href="https://www.facebook.com/people/RA-Racing/61569984414608/?mibextid=ZbWKwL"><i class='bx bxl-facebook' ></a></i>
-			<a href="mailto: contact@raracing.com"><i class='bx bxs-envelope' ></a></i>
-			
-		</div>
-	</section>
+        <section id="about-ra-team">
+            <div class="heading">
+                <h2>About RA Racing</h2>
+                <p>Our <span>Journey</span>, Our <span>Team</span>, Our <span>Mission</span></p>
+            </div>
 
+            <div class="sticky-notes">
+                <div class="sticky-note">
+                    <h3>Founded in Passion</h3>
+                    <p>Established by a group of motorsport enthusiasts with a shared dream of creating a hub for racing talent and community.</p>
+                </div>
 
-	<section id="about-ra-team">
-    	<div class="heading">
-        	<h2>About RA Racing</h2>
-        	<p>Our <span>Journey</span>, Our <span>Team</span>, Our <span>Mission</span></p>
-    	</div>
-    
-    <!-- Container for sticky notes -->
-    <div class="sticky-notes">
-        <div class="sticky-note">
-            <h3>Founded in Passion</h3>
-            <p>Established by a group of motorsport enthusiasts with a shared dream of creating a hub for racing talent and community.</p>
-        </div>
-        
-        <div class="sticky-note">
-            <h3>Our Core Values</h3>
-            <p>Innovation, Integrity, Inclusivity, Sustainability.</p>
-        </div>
-        <div class="sticky-note">
-            <h3>Promote Motorsport</h3>
-            <p>Encourage participation in automobile racing in Romania.</p>
-        </div>
-        <div class="sticky-note">
-            <h3>Support Athletes</h3>
-            <p>Provide resources, training, and assistance to members and aspiring athletes.</p>
-        </div>
-		<div class="sticky-note">
-            <h3>Legal Status</h3>
-            <p>A nonprofit sports organization committed to promoting motorsports and recreational racing activities.</p>
-        </div>
-        <div class="sticky-note">
-            <h3>Revenue Sources</h3>
-            <p>Funded through member contributions, sponsorships, donations, and activities aligned with its goals.</p>
-        </div>
-    </div>
-</section>
+                <div class="sticky-note">
+                    <h3>Our Core Values</h3>
+                    <p>Innovation, Integrity, Inclusivity, Sustainability.</p>
+                </div>
+                <div class="sticky-note">
+                    <h3>Promote Motorsport</h3>
+                    <p>Encourage participation in automobile racing in Romania.</p>
+                </div>
+                <div class="sticky-note">
+                    <h3>Support Athletes</h3>
+                    <p>Provide resources, training, and assistance to members and aspiring athletes.</p>
+                </div>
+                <div class="sticky-note">
+                    <h3>Legal Status</h3>
+                    <p>A nonprofit sports organization committed to promoting motorsports and recreational racing activities.</p>
+                </div>
+                <div class="sticky-note">
+                    <h3>Revenue Sources</h3>
+                    <p>Funded through member contributions, sponsorships, donations, and activities aligned with its goals.</p>
+                </div>
+            </div>
+        </section>
 
+        <section id="about">
+            <div class="heading">
+                <h2>My Story</h2>
+            </div>
 
+            <div class="about-content">
+                <div class="about-img">
+                    <img src="assets/about.png" alt="Darius Chirila" class="image-fade-in fade-in-element">
+                </div>
+                <div class="about-text">
+                    <h1><span>The Journey So Far</span></h1>
+                    <p>I come from Romania, a country where racing is not as appreciated as it should be, but I am determined to change that, and become a professional race car driver, with the help of <b><i>RA Racing</i></b>, a club that I am a part of.<br><br>
+                        Ever since I was a kid, I dreamed of driving fast cars, and as of last year, I took the plunge. I signed up for a race car driving course, and I was hooked. The experience was mind-blowing, and I realized that I had found my calling.<br>
+                    </p>
 
+                    <p>My first race was in March 2023 when I drove around Motorpark Romania. Throughout the season, there were moments of uncertainty, times when I couldn’t see the full picture. But I came across a quote from <i>The Boy, the Mole, the Fox and the Horse</i> by Charlie Mackesy, which resonated with me:</p>
 
-	<section id="about">
-		<div class="heading">
-			<h2>My Story</h2>
-			
-		</div>
+                    <p><i>"I can't see a way through," said the boy. <br>
+                            "Can you see your next step?" <br>
+                            "Yes." <br>
+                            "Just take that," said the horse.</i></p>
 
-		<div class="about-content">
-			<div class="about-img">
-				<img src="assets/a2.png" alt="">
-			</div>
-			<div class="about-text">
-				<h1><span>The Journey So Far</span></h1>
-				<p>I come from Romania, a country where racing is not as appreciated as it should be, but I am determined to change that, and become a professional race car driver, with the help of <b><i>RA Racing</i></b>, a club that I am a part of.<br><br>
-    			Ever since I was a kid, I dreamed of driving fast cars, and as of last year, I took the plunge. I signed up for a race car driving course, and I was hooked. The experience was mind-blowing, and I realized that I had found my calling.<br>
-    			</p>
-    			
-    			<p>My first race was in March 2023 when I drived around Motorpark Romania. Throughout the season, there were moments of uncertainty, times when I couldn’t see the full picture. But I came across a quote from <i>The Boy, the Mole, the Fox and the Horse</i> by Charlie Mackesy, which resonated with me:</p>
-    			
-    			<p><i>"I can't see a way through," said the boy. <br>
-    			"Can you see your next step?" <br>
-    			"Yes." <br>
-    			"Just take that," said the horse.</i></p>
-    			
-    			<p>It made me realize that I didn’t need to have it all figured out. I just needed to focus on the <i>next step</i>. <br>In my last race of the season and also the most important one, I put aside all my long time future goals and focused on the present moment. After 8 hours of hard racing through tough conditions, I managed to cross the finish line and secure <b>first place</b> in my class.	
-					
-				<br><br>That next step is entering the <b><i>Clio Cup</i></b>, an international series that is popular among amateur drivers all across the world. For this, I will need to <i>buy a new car and train even harder</i>, but I will do everything that I can do to succeed in pursuing my dreams.<br>
-    			Now, I’m looking ahead, with the <b><i>World Endurance Championship</i></b> as my ultimate goal. It won’t be easy, but with each race, I’ll be a step closer. As the horse wisely said, I just have to <i>keep moving forward</i>, one step at a time.</p>
+                    <p>It made me realize that I didn’t need to have it all figured out. I just needed to focus on the <i>next step</i>. <br>In my last race of the season and also the most important one, I put aside all my long time future goals and focused on the present moment. After 8 hours of hard racing through tough conditions, I managed to cross the finish line and secure <b>first place</b> in my class.	
+                        
+                        <br><br>That next step is entering the <b><i>Clio Cup</i></b>, an international series that is popular among amateur drivers all across the world. For this, I will need to <i>buy a new car and train even harder</i>, but I will do everything that I can do to succeed in pursuing my dreams.<br>
+                        Now, I’m looking ahead, with the <b><i>World Endurance Championship</i></b> as my ultimate goal. It won’t be easy, but with each race, I’ll be a step closer. As the horse wisely said, I just have to <i>keep moving forward</i>, one step at a time.</p>
+                </div>
+            </div>
+        </section>
 
+        <section id="donation">
+            <div class="heading">
+                <h2>Support Us</h2>
+                <p>Your generosity makes all the difference in helping us achieve our mission!</p>
+            </div>
 
+            <div class="donation-content">
+                <form action="https://www.paypal.com/ncp/payment/5FZ33HW4CHSDJ" method="post" target="_top" class="paypal-form">
+                    <input class="pp-btn" type="submit" value="Donate" />
+                    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" class="paypal-cards image-fade-in fade-in-element" />
+                    <section class="paypal-powered">
+                        Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" class="paypal-logo image-fade-in fade-in-element" />
+                    </section>
+                </form>
+            </div>
+        </section>
 
-			</div>
-		</div>
-	</section>
+        <section id="contact">
+            <div class="heading color">
+                <h2>Contact</h2>
+                <p>Leave a message, we will try to reply in 24 hours.</p>
+            </div>
 
-	<section id="donation">
-    	<div class="heading">
-        	<h2>Support Us</h2>
-        	<p>Your generosity makes all the difference in helping us achieve our mission!</p>
-    	</div>
+            <div class="contact-content">
+                <div class="contact-form">
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="45287879-1e6d-4ffd-b80f-c4c0ea4246da">
+                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="email" name="email" placeholder="Your E-mail" required>
+                        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message Here..." required></textarea>
+                        <input type="submit" value="Send" class="ct-btn">
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <!-- Donation Content -->
-    	<div class="donation-content">
-        <!-- More text for the donation section -->
+    <footer class="copyright">
+        <p>&copy; 2024 RA Racing. All Rights Reserved.</p>
+    </footer>
 
-
-        <!-- PayPal Donation Button -->
-        	<form action="https://www.paypal.com/ncp/payment/5FZ33HW4CHSDJ" method="post" target="_top" class="paypal-form">
-            	<input class="paypal-button" type="submit" value="Donate" />
-            	<img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" class="paypal-cards" />
-            	<section class="paypal-powered">
-                	Powered by <img src="https://www.paypalobjects.com/paypal-ui/logos/svg/paypal-wordmark-color.svg" alt="paypal" class="paypal-logo" />
-            	</section>
-        	</form>
-    	</div>
-	</section>
-
-<section id="contact">
-    <div class="heading color">
-        <h2>Contact</h2>
-        <p>Leave a message, we will try to reply in 24 hours.</p>
-    </div>
-
-    <div class="contact-content">
-        <div class="contact-form">
-            <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
-            	<input type="hidden" name="access_key" value="45287879-1e6d-4ffd-b80f-c4c0ea4246da">
-                <input type="text" name="name" placeholder="Name" required>
-                <input type="email" name="email" placeholder="Your E-mail" required>
-                <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message Here..." required></textarea>
-                <input type="submit" value="Send" class="contact-button">
-            </form>
-        </div>
-    </div>
-</section>
-
-
-
-	<div class="copyright">
-		<p>&#169; RA Racing All Rights Reserved</p>
-	</div>
-
-	<script src="main.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
