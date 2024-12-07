@@ -58,6 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function toggleMenu() {
         menu?.classList.toggle('active');
         menuToggle?.classList.toggle('active');
+        document.body.classList.toggle('menu-open');  // Add this line to toggle body scroll
         
         const isMenuActive = menu?.classList.contains('active');
         menuIcon.src = isMenuActive ? 'assets/close.png' : 'assets/menu.png';
