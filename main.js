@@ -1,5 +1,39 @@
 // Mobile Menu and Smooth Scrolling Functionality
 document.addEventListener('DOMContentLoaded', () => {
+    // Theme switching functionality
+    function setTheme(theme) {
+        const body = document.body;
+        const logo = document.querySelector('.logo');
+        
+        if (theme === 'dark') {
+            body.classList.remove('light-mode');
+            body.classList.add('dark-mode');
+            logo.src = 'assets/logoo.png';  // Orange logo for dark mode
+        } else {
+            body.classList.remove('dark-mode');
+            body.classList.add('light-mode');
+            logo.src = 'assets/logop.png';  // Purple logo for light mode
+        }
+    }
+
+    // Detect system color scheme and apply theme
+    function detectColorScheme() {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            setTheme('dark');
+        } else {
+            setTheme('light');
+        }
+    }
+
+    // Initial theme detection
+    detectColorScheme();
+
+    // Listen for changes in system color scheme
+    window.matchMedia('(prefers-color-scheme: dark)')
+        .addEventListener('change', e => {
+            setTheme(e.matches ? 'dark' : 'light');
+        });
+
     const menuToggle = document.querySelector('.toggle');
     const menu = document.querySelector('.menu');
     const menuItems = document.querySelectorAll('.menu a');
@@ -8,7 +42,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // Smooth scroll to target section
     function smoothScroll(target) {
         const element = document.querySelector(target);
-        element?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (element) {
+            const headerOffset = 80; // Adjust this value based on your navbar height
+            const elementPosition = element.getBoundingClientRect().top;
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
+            });
+        }
     }
 
     // Toggle mobile menu
@@ -30,5 +73,4 @@ document.addEventListener('DOMContentLoaded', () => {
             smoothScroll(item.getAttribute('href'));
         });
     });
-
 });
