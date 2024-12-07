@@ -1,0 +1,1851 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+
+/* Ra's Solar Palette */
+:root {
+    /* Primary Colors */
+    --vibrant-purple: #800080;
+    --energetic-orange: #FFA500;
+    
+    /* Accent Colors */
+    --electric-blue: #007BFF;
+    --bright-yellow: #FFD700;
+    
+    /* Neutral Colors */
+    --dark-gray: #333333;
+    --light-gray: #F5F5F5;
+    
+    /* Functional Color Assignments */
+    --main-color: var(--energetic-orange);
+    --second-color: var(--vibrant-purple);
+    --gradient-angle: 45deg;
+    --section-bg-1: var(--vibrant-purple);
+    --section-bg-2: var(--dark-gray);
+    --section-bg-3: var(--electric-blue);
+    --section-text-color: var(--bright-yellow);
+    --ra-text-primary: var(--bright-yellow);
+    --ra-text-secondary: var(--light-gray);
+    --ra-text-shadow: rgba(0, 0, 0, 0.7);
+    --ra-highlight-color: var(--electric-blue);
+    --ra-body-text-color: var(--light-gray);
+    --ra-accent-color: var(--energetic-orange);
+    --text-color-light: #000000;
+    --text-color-dark: #FFFFFF;
+    --bg-color-light: #FFFFFF;
+    --bg-color-dark: #000000;
+    --background-color: var(--bg-color-dark);
+}
+
+/* Theme-specific styles */
+body.light-mode {
+    background-color: var(--light-gray);
+    color: var(--text-color-light);
+}
+
+body.dark-mode {
+    background-color: var(--dark-gray);
+    color: var(--text-color-dark);
+}
+
+/* Light Mode Specific Styles */
+body.light-mode,
+body:not(.dark-mode) {
+    --main-color: var(--vibrant-purple);
+    --second-color: #9932CC;
+    --accent-color: #4B0082;
+    --text-primary: #000000;
+    --text-secondary: #333333;
+    --background-color: var(--light-gray);
+    background: var(--bg-color-light) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Dark Mode Specific Styles */
+body.dark-mode {
+    --main-color: var(--energetic-orange);
+    --second-color: #FF8C00;
+    --accent-color: #FFB347;
+    --text-primary: #FFFFFF;
+    --text-secondary: #F5F5F5;
+    --background-color: var(--dark-gray);
+    background: linear-gradient(
+        135deg,
+        var(--dark-gray),
+        #000000,
+        var(--dark-gray)
+    ) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Global Background Theme */
+body.light-mode,
+body:not(.dark-mode) {
+    background: var(--light-gray) !important;
+}
+
+body.dark-mode {
+    background: var(--dark-gray) !important;
+}
+
+/* Section Background Theme */
+body.light-mode main,
+body:not(.dark-mode) main {
+    background: var(--light-gray) !important;
+}
+
+body.dark-mode main {
+    background: var(--dark-gray) !important;
+}
+
+/* Ensure all sections have consistent background */
+body.light-mode #home,
+body.light-mode #about-ra-team,
+body.light-mode #about,
+body.light-mode #contact,
+body.light-mode #donation,
+body:not(.dark-mode) #home,
+body:not(.dark-mode) #about-ra-team,
+body:not(.dark-mode) #about,
+body:not(.dark-mode) #contact,
+body:not(.dark-mode) #donation {
+    background-color: var(--light-gray) !important;
+}
+
+body.dark-mode #home,
+body.dark-mode #about-ra-team,
+body.dark-mode #about,
+body.dark-mode #contact,
+body.dark-mode #donation {
+    background-color: var(--dark-gray) !important;
+}
+
+/* Specific element color adjustments */
+body.light-mode .menu a,
+body:not(.dark-mode) .menu a {
+    color: black !important;
+    transition: color 0.3s ease !important;
+}
+
+body.dark-mode .menu a {
+    color: white !important;
+    transition: color 0.3s ease !important;
+}
+
+body.light-mode .menu a:hover,
+body:not(.dark-mode) .menu a:hover {
+    color: var(--main-color) !important;
+}
+
+body.dark-mode .menu a:hover {
+    color: black !important;
+}
+
+body.light-mode .cta-button,
+body:not(.dark-mode) .cta-button {
+    background: var(--main-color) !important;
+    color: white !important;
+}
+
+body.dark-mode .cta-button {
+    background: var(--main-color) !important;
+    color: white !important;
+}
+
+/* Light Mode - Purple Theme */
+body.light-mode {
+    --main-color: var(--vibrant-purple) !important;
+    --second-color: #9932CC !important; /* lighter purple */
+    --accent-color: #4B0082 !important; /* darker purple */
+    --text-primary: #000000 !important;
+    --text-secondary: #333333 !important;
+    --highlight: var(--vibrant-purple) !important;
+    
+    background: var(--bg-color-light) !important;
+    color: var(--text-primary) !important;
+}
+
+body.light-mode .menu a,
+body.light-mode .section-title,
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode .sticky-note,
+body.light-mode .highlight-text {
+    color: var(--main-color) !important;
+}
+
+body.light-mode .cta-button,
+body.light-mode .contact-form form input[type="submit"] {
+    background: var(--main-color) !important;
+    color: white !important;
+}
+
+body.light-mode .cta-button:hover,
+body.light-mode .contact-form form input[type="submit"]:hover {
+    background: var(--second-color) !important;
+}
+
+body.light-mode .menu a::before {
+    background-color: var(--main-color) !important;
+}
+
+/* Dark Mode - Orange Theme */
+body.dark-mode {
+    --main-color: var(--energetic-orange) !important;
+    --second-color: #FF8C00 !important; /* darker orange */
+    --accent-color: #FFB347 !important; /* lighter orange */
+    --text-primary: #FFFFFF !important;
+    --text-secondary: #F5F5F5 !important;
+    --highlight: var(--bright-yellow) !important;
+    
+    background: linear-gradient(
+        135deg,
+        var(--dark-gray),
+        #000000,
+        var(--dark-gray)
+    ) !important;
+    color: var(--text-primary) !important;
+}
+
+body.dark-mode .menu a,
+body.dark-mode .section-title,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode .sticky-note,
+body.dark-mode .highlight-text {
+    color: var(--main-color) !important;
+}
+
+body.dark-mode .cta-button,
+body.dark-mode .contact-form form input[type="submit"] {
+    background: var(--main-color) !important;
+    color: white !important;
+}
+
+body.dark-mode .cta-button:hover,
+body.dark-mode .contact-form form input[type="submit"]:hover {
+    background: var(--second-color) !important;
+}
+
+body.dark-mode .menu a::before {
+    background-color: var(--main-color) !important;
+}
+
+/* Background and Sticky Note Theme Adjustments */
+body.light-mode,
+body:not(.dark-mode) {
+    background: var(--light-gray) !important;
+}
+
+body.dark-mode {
+    background: var(--dark-gray) !important;
+}
+
+/* Sticky Notes Theme Adjustments */
+body.light-mode .sticky-notes .sticky-note,
+body:not(.dark-mode) .sticky-notes .sticky-note {
+    background-color: white !important;
+    color: black !important;
+}
+
+body.light-mode .sticky-notes .sticky-note h3,
+body:not(.dark-mode) .sticky-notes .sticky-note h3 {
+    color: var(--main-color) !important;
+}
+
+body.dark-mode .sticky-notes .sticky-note {
+    background-color: #2c2c2c !important;
+    color: white !important;
+}
+
+body.dark-mode .sticky-notes .sticky-note h3 {
+    color: var(--main-color) !important;
+}
+
+/* Ensure main background matches section backgrounds */
+body.light-mode,
+body:not(.dark-mode) {
+    background: var(--light-gray) !important;
+}
+
+body.dark-mode {
+    background: var(--dark-gray) !important;
+}
+
+/* Common hover effects */
+.menu a:hover {
+    color: var(--second-color) !important;
+}
+
+.menu a:hover::before {
+    background-color: var(--second-color) !important;
+}
+
+/* Update button and interactive elements */
+.cta-button,
+.menu a::before,
+.contact-form form input[type="submit"],
+.sticky-note {
+    background-color: var(--main-color) !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.cta-button:hover,
+.menu a:hover,
+.contact-form form input[type="submit"]:hover {
+    background-color: var(--second-color) !important;
+    color: var(--text-color-dark) !important;
+}
+
+.menu a:hover::before {
+    background-color: var(--second-color) !important;
+}
+
+/* Update other themed elements */
+.sticky-note {
+    border-color: var(--second-color) !important;
+}
+
+.section-title,
+.highlight-text {
+    color: var(--main-color) !important;
+}
+
+/* Ensure text remains readable */
+body.light-mode .menu a,
+body.light-mode .cta-button {
+    color: var(--text-color-dark) !important;
+}
+
+body.dark-mode .menu a,
+body.dark-mode .cta-button {
+    color: var(--text-color-dark) !important;
+}
+
+/* Gradient Diagonal Fade Animation */
+@keyframes diagonalFade {
+    0% {
+        background-position: 100% 0%;
+    }
+    50% {
+        background-position: 0% 100%;
+    }
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+/* Base Theme */
+html, body,
+#home, 
+#about-ra-team,
+#about,
+#donation,
+#contact {
+    margin: 0 !important;
+    padding: 0 !important;
+    position: relative !important;
+    min-height: 100vh !important;
+    overflow-x: hidden !important;
+    color: var(--ra-body-text-color) !important;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5) !important;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    background-color: var(--bg-color-light);
+    color: var(--text-color-light);
+    transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+}
+
+/* Light Mode */
+body.light-mode {
+    background: var(--bg-color-light) !important;
+    color: var(--text-color-light) !important;
+}
+
+.light-mode nav {
+    background: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: none;
+}
+
+/* Dark Mode - Original Styling */
+body.dark-mode {
+    background: linear-gradient(
+        135deg,
+        var(--dark-gray),    /* Start with royal purple */
+        #000000,                   /* Mid purple */
+        var(--dark-gray),                   /* Lighter purple */
+        var(--dark-gray)     /* Back to royal purple for smooth transition */
+    ) !important;
+    background-size: 200% 200% !important;
+    background-attachment: fixed !important;
+    animation: diagonalFade 15s ease infinite !important;
+}
+
+/* Navbar Theme Matching Background */
+body.light-mode nav,
+body:not(.dark-mode) nav {
+    background-color: var(--light-gray) !important;
+    box-shadow: none !important;
+}
+
+body.dark-mode nav {
+    background-color: var(--dark-gray) !important;
+    box-shadow: none !important;
+}
+
+/* Ensure navbar elements match background */
+body.light-mode .logo-container,
+body:not(.dark-mode) .logo-container {
+    background-color: var(--light-gray) !important;
+    box-shadow: none !important;
+}
+
+body.dark-mode .logo-container {
+    background-color: var(--dark-gray) !important;
+    box-shadow: none !important;
+}
+
+/* RA Racing Text Color */
+body.light-mode .menu-link,
+body:not(.dark-mode) .menu-link {
+    color: var(--main-color) !important;
+    transition: color 0.3s ease !important;
+}
+
+body.dark-mode .menu-link {
+    color: var(--main-color) !important;
+    transition: color 0.3s ease !important;
+}
+
+/* Section Navigation Buttons Color */
+body.light-mode .menu a,
+body:not(.dark-mode) .menu a {
+    color: black !important;
+    transition: color 0.3s ease !important;
+}
+
+body.light-mode .menu a:hover,
+body:not(.dark-mode) .menu a:hover {
+    color: white !important;
+}
+
+body.dark-mode .menu a {
+    color: white !important;
+    transition: color 0.3s ease !important;
+}
+
+body.dark-mode .menu a:hover {
+    color: black !important;
+}
+
+/* Navbar Menu Items Shadow */
+body.light-mode .menu a,
+body:not(.dark-mode) .menu a {
+    transition: all 0.3s ease !important;
+    box-shadow: none !important;
+}
+
+body.dark-mode .menu a {
+    transition: all 0.3s ease !important;
+    box-shadow: none !important;
+}
+
+/* Section Styles */
+section {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 100vh; /* Ensure sections take at least the full height of the viewport */
+}
+
+/* About RA Team Section - Horizontal Sticky Notes */
+#about-ra-team {
+    position: relative;
+    top: 50px; /* Push the section lower */
+    margin-bottom: 50px; /* Add extra space at the bottom */
+    padding: 50px 0;
+    background-color: var(--bg-color-light);
+    transition: background-color 0.3s ease;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-ra-team .sticky-notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#about-ra-team .sticky-note {
+    flex: 1 1 200px;
+    max-width: 200px;
+    background: var(--section-bg-1);
+    color: var(--section-text-color);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: none !important;
+    text-align: center;
+}
+
+@media (prefers-color-scheme: dark) {
+    #about-ra-team {
+        background-color: var(--bg-color-dark);
+    }
+}
+
+#about-ra-team .heading {
+    margin-bottom: 50px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Home Section Responsive Design */
+#home {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 100vh !important;
+    padding: 0 5% !important;
+}
+
+.home-content {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    max-width: 1200px !important;
+    margin: 0 auto 30px !important;
+    gap: 50px !important;
+}
+
+.home-text {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    width: 45% !important;
+    text-align: left !important;
+}
+
+.home-text h1 {
+    font-size: clamp(2rem, 4vw, 3.5rem) !important;
+    margin-bottom: 20px !important;
+    line-height: 1.2 !important;
+}
+
+.home-text p {
+    font-size: clamp(1rem, 2vw, 1.2rem) !important;
+    margin-bottom: 20px !important;
+}
+
+.home-text .cta-button {
+    align-self: flex-start !important;
+    margin-top: 15px !important;
+    font-size: clamp(0.9rem, 2vw, 1.1rem) !important;
+    padding: clamp(10px, 2vw, 15px) clamp(20px, 4vw, 30px) !important;
+}
+
+.home-img {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 45% !important;
+}
+
+.home-img img {
+    width: 100% !important;
+    max-width: 500px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    border-radius: 10px !important;
+}
+
+.social a {
+    font-size: clamp(1.2rem, 3vw, 1.5rem) !important;
+}
+
+@media (max-width: 768px) {
+    .home-content {
+        flex-direction: column !important;
+        gap: 20px !important;
+    }
+
+    .home-text,
+    .home-img {
+        width: 100% !important;
+        text-align: center !important;
+        align-items: center !important;
+    }
+
+    .home-text h1 {
+        text-align: center !important;
+    }
+
+    .home-text p {
+        text-align: center !important;
+    }
+
+    .home-text .cta-button {
+        align-self: center !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #home {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        padding: 80px 5% 20px !important;
+    }
+
+    .home-content {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        gap: 30px !important;
+    }
+
+    .home-text {
+        width: 100% !important;
+        text-align: center !important;
+        align-items: center !important;
+        order: 1 !important;
+    }
+
+    .home-text h1 {
+        text-align: center !important;
+        font-size: clamp(1.8rem, 7vw, 2.5rem) !important;
+    }
+
+    .home-text p {
+        text-align: center !important;
+        font-size: clamp(1rem, 4vw, 1.2rem) !important;
+    }
+
+    .home-img {
+        width: 100% !important;
+        order: 2 !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+    }
+
+    .home-img img {
+        max-width: 80% !important;
+        height: auto !important;
+    }
+
+    .home-text .cta-button {
+        align-self: center !important;
+        order: 3 !important;
+        margin-top: 20px !important;
+    }
+
+    .social {
+        order: 4 !important;
+        margin-top: 20px !important;
+        width: 100% !important;
+        justify-content: center !important;
+    }
+}
+
+/* Social Media Icons */
+.social {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 300px;
+    z-index: 2;
+    gap: clamp(10px, 5vw, 30px);
+}
+
+.social a {
+    transition: all 0.3s ease !important;
+    background-color: transparent !important;
+    color: var(--main-color) !important;
+    border: none !important;
+}
+
+body.light-mode .social a:hover,
+body:not(.dark-mode) .social a:hover {
+    color: white !important;
+    transform: scale(1.1) !important;
+}
+
+body.dark-mode .social a:hover {
+    color: black !important;
+    transform: scale(1.1) !important;
+}
+
+.social a i {
+    font-size: clamp(20px, 6vw, 28px) !important;
+}
+
+@media (max-width: 480px) {
+    .social {
+        bottom: 10%;
+        max-width: 250px;
+        gap: clamp(5px, 3vw, 20px);
+    }
+
+    .social a {
+        width: clamp(35px, 10vw, 50px) !important;
+        height: clamp(35px, 10vw, 50px) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    .social a i {
+        font-size: clamp(16px, 6vw, 22px) !important;
+    }
+}
+
+/* About Section */
+#about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+}
+
+.about-img {
+    flex: 1;
+    height: auto;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+}
+
+.about-text {
+    flex: 1;
+    justify-content: center;
+}
+
+.about-text h1 {
+    font-size: 1.5rem;
+    color: var(--second-color);
+}
+
+.about-text h1 span {
+    color: var(--main-color);
+}
+
+.about-text p {
+    color: var(--second-color);
+    margin: 5px 0 24px;
+    text-align: justify;
+    line-height: 1.8rem;
+}
+
+.about-text a {
+    padding: 12px 20px;
+    background: var(--main-color);
+    color: #fff;
+    border-radius: 10px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.about-text a:hover {
+    background: var(--second-color);
+    box-shadow: none;
+}
+
+/* Navbar Text Adjustment */
+nav .menu-link {
+    font-size: 1.2rem;
+    color: var(--text-color-light);
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* About Section Title Adjustment */
+#about .heading {
+    margin-top: 20px;
+}
+
+/* Donation Section Centering */
+#donation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: none;
+    transition: background-color 0.3s ease;
+}
+
+/* Contact Section Input Arrangement */
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border: 1px solid var(--dark-gray);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+    box-shadow: none;
+}
+
+.contact-form form textarea {
+    resize: none;
+    min-height: 150px;
+}
+
+.contact-form form button {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column !important;
+        padding: 0 20px !important;
+    }
+
+    .contact-form {
+        width: 100% !important;
+    }
+
+    .contact-form form {
+        width: 100% !important;
+    }
+
+    .contact-form form input,
+    .contact-form form textarea,
+    .contact-form form button {
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box !important;
+    }
+}
+
+/* Donation Section */
+#donation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 400px;
+    background-color: var(--background-color);
+    border-radius: 10px;
+    box-shadow: none;
+    transition: background-color 0.3s ease;
+}
+
+@media (prefers-color-scheme: dark) {
+    #donation {
+        background-color: var(--bg-color-dark);
+    }
+}
+
+#donation .pp-btn {
+    width: 100%;
+    max-width: 300px;
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#donation .pp-btn:hover {
+    background-color: var(--second-color);
+}
+
+/* Donation section logo styles */
+.donation-logo {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+    width: 100%;
+}
+
+.big-logo {
+    width: 300px;
+    height: auto;
+    opacity: 1;
+}
+
+/* Update the logo based on theme */
+body.light-mode .big-logo {
+    content: url('assets/logop.png');
+}
+
+body.dark-mode .big-logo {
+    content: url('assets/logoo.png');
+}
+
+/* Contact Section */
+#contact {
+    background: var(--background-color);
+}
+
+#contact .heading {
+    text-align: center;
+}
+
+.contact-form form input[type="submit"] {
+    width: 100%;
+    max-width: 300px;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background-color: var(--main-color);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form form input[type="submit"]:hover {
+    background-color: var(--second-color);
+}
+
+/* Copyright Section */
+.copyright {
+    position: fixed !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    background-color: var(--dark-gray) !important;
+    color: var(--ra-body-text-color) !important;
+    text-align: center !important;
+    padding: 10px 0 !important;
+    box-shadow: none !important;
+    z-index: 1000 !important;
+}
+
+.copyright p {
+    margin: 0 !important;
+    font-size: 0.9rem !important;
+    color: var(--ra-body-text-color) !important;
+}
+
+/* Dark mode adjustments for footer */
+body.dark-mode .copyright {
+    background-color: rgba(0, 0, 0, 0.9) !important;
+    color: var(--ra-body-text-color) !important;
+}
+
+/* Light mode adjustments for footer */
+body.light-mode .copyright {
+    background-color: var(--dark-gray) !important;
+    color: var(--ra-body-text-color) !important;
+}
+
+/* Navigation */
+nav {
+    all: unset;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    height: 70px !important;
+    background-color: var(--dark-gray) !important;
+    padding: 0 5% !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    z-index: 10000 !important;
+    margin: 0 !important;
+    box-sizing: border-box !important;
+}
+
+nav .logo-container img {
+    max-height: 50px;
+    width: auto;
+}
+
+/* Logo Container Adjustments */
+.logo-container {
+    display: flex !important;
+    align-items: center !important;
+    gap: 10px !important;
+    max-width: 50% !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.logo-container a {
+    display: flex !important;
+    align-items: center !important;
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.logo {
+    max-width: 100px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: none !important;
+    border: none !important;
+}
+
+/* Menu Styling */
+.menu {
+    display: flex !important;
+    list-style: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 50% !important;
+    flex-wrap: wrap !important;
+    justify-content: flex-end !important;
+}
+
+.menu li {
+    margin-right: 0.8rem !important;
+    margin-bottom: 0 !important;
+}
+
+.menu a {
+    text-decoration: none !important;
+    color: white !important;
+    font-size: 0.9rem !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    position: relative !important;
+    padding: 5px 10px !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.menu a::before {
+    content: '' !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    width: 0 !important;
+    height: 2px !important;
+    background-color: var(--electric-blue) !important;
+    transition: width 0.3s ease-in-out !important;
+}
+
+.menu a:hover::before {
+    width: 100% !important;
+}
+
+.menu a:hover {
+    color: var(--electric-blue) !important;
+}
+
+/* Mobile Menu Styling */
+@media (max-width: 768px) {
+    .menu {
+        display: none !important;
+        position: fixed !important;
+        top: 70px !important;
+        left: -100vw !important;
+        width: 100% !important;
+        height: calc(100vh - 70px) !important;
+        flex-direction: column !important;
+        background: rgba(0, 0, 0, 0.95) !important;
+        transition: 0.3s !important;
+    }
+
+    .menu.active {
+        display: flex !important;
+    }
+
+    .menu li {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 10px 0 !important;
+        padding: 0 20px !important;
+        position: relative !important;
+    }
+
+    .menu a {
+        display: block !important;
+        width: 100% !important;
+        padding: 15px 0 !important;
+        font-size: 1.2rem !important;
+        text-align: center !important;
+        position: relative !important;
+    }
+
+    .menu a::before {
+        content: '' !important;
+        position: absolute !important;
+        bottom: 0 !important;
+        left: 50% !important;
+        width: 0 !important;
+        height: 2px !important;
+        background-color: var(--electric-blue) !important;
+        transition: all 0.3s ease-in-out !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .menu a:hover::before {
+        width: 80% !important;
+    }
+
+    .menu a:hover {
+        color: var(--electric-blue) !important;
+    }
+}
+
+/* Toggle Button for Mobile */
+@media (max-width: 768px) {
+    .toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        height: 70px !important;
+        width: 50px !important;
+        position: relative !important;
+    }
+
+    nav .menu-toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .toggle,
+    .menu-toggle {
+        display: none !important;
+    }
+}
+
+/* Responsive Navigation */
+@media screen and (max-width: 768px) {
+    nav {
+        padding: 15px 3% !important;
+        flex-wrap: wrap !important;
+    }
+
+    .logo-container {
+        width: 100% !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+    }
+
+    .toggle {
+        display: block !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .toggle {
+        display: none !important;
+    }
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    nav .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sticky-notes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-img img {
+        width: 80%;
+    }
+
+    .social a {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Simplify and refine responsive design */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        max-width: 85%;
+    }
+}
+
+/* Buttons */
+.button,
+.cta-button,
+.contact-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: var(--energetic-orange);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover,
+.cta-button:hover,
+.contact-button:hover {
+    background-color: var(--vibrant-purple);
+    color: var(--electric-blue);
+    transform: scale(1.05);
+    box-shadow: none;
+}
+
+/* Images */
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Adjust width and margin for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    nav {
+        padding: 0.5rem;
+    }
+
+    .menu {
+        position: fixed !important;
+        top: 70px !important;
+        left: -100vw !important;
+        width: 100% !important;
+        height: calc(100vh - 70px) !important;
+        flex-direction: column !important;
+        background: rgba(0,0,0,0.9) !important;
+        transition: 0.3s !important;
+    }
+
+    .menu.active {
+        left: 0 !important;
+    }
+
+    #home {
+        padding-top: 120px !important;
+    }
+
+    .toggle {
+        display: block !important;
+    }
+}
+
+/* Light Mode Text Colors */
+body.light-mode h1,
+body.light-mode h2,
+body.light-mode h3,
+body.light-mode p {
+    color: var(--text-color-light);
+    text-shadow: none;
+}
+
+body.light-mode .menu a {
+    color: var(--text-color-light);
+}
+
+/* Dark Mode Text Colors - Original */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode p {
+    color: var(--ra-body-text-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .menu a {
+    color: var(--ra-body-text-color);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .menu {
+        position: fixed;
+        top: 80px; /* Match navbar height */
+        left: -100%;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--second-color);
+        transition: left 0s ease;
+        padding: 20px;
+    }
+    
+    .menu.active {
+        left: 0;
+    }
+    
+    .menu li {
+        width: 100% !important;
+        text-align: center !important;
+        margin: 10px 0 !important;
+        padding: 0 20px !important;
+        position: relative !important;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        width: 100vw !important;
+        left: 0 !important;
+        right: 0 !important;
+        position: fixed !important;
+        top: 70px !important;
+        height: calc(100vh - 70px) !important;
+        background: rgba(0, 0, 0, 0.9) !important;
+        z-index: 1000 !important;
+        max-width: 100% !important;
+        transition: background-color 0.3s ease !important;
+    }
+}
+
+/* Contact Section Styling */
+#contact {
+    background: var(--background-color) !important;
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 50px 0 !important;
+}
+
+body.light-mode #contact {
+    background: #f5f5f5 !important;
+}
+
+body.dark-mode #contact {
+    background: var(--dark-gray) !important;
+}
+
+.contact-form {
+    width: 100% !important;
+    max-width: 600px !important;
+    margin: 0 auto !important;
+    padding: 20px !important;
+}
+
+.contact-form form input,
+.contact-form form textarea {
+    width: 100% !important;
+    padding: 12px !important;
+    margin-bottom: 15px !important;
+    border-radius: 5px !important;
+    font-size: 1rem !important;
+}
+
+body.light-mode .contact-form form input,
+body.light-mode .contact-form form textarea {
+    background: white !important;
+    border: 2px solid var(--main-color) !important;
+    color: black !important;
+}
+
+body.dark-mode .contact-form form input,
+body.dark-mode .contact-form form textarea {
+    background: #2d2d2d !important;
+    border: 2px solid var(--main-color) !important;
+    color: white !important;
+}
+
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 30px !important;
+    }
+
+    .contact-text {
+        width: 100% !important;
+        text-align: center !important;
+        margin-bottom: 20px !important;
+    }
+
+    .contact-form {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 20px !important;
+    }
+
+    .contact-form form {
+        width: 100% !important;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        width: 100% !important;
+        padding: 10px !important;
+        font-size: 16px !important;
+    }
+
+    .contact-form .form-group {
+        margin-bottom: 15px !important;
+    }
+
+    .contact-form button {
+        width: 100% !important;
+        padding: 12px !important;
+        font-size: 16px !important;
+    }
+}
+
+/* Donation Section Styling */
+#donation {
+    width: 100% !important;
+    max-width: 800px !important;
+    margin: 0 auto !important;
+    padding: 40px 20px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+body.light-mode #donation {
+    background: #f5f5f5 !important;
+}
+
+body.dark-mode #donation {
+    background: var(--dark-gray) !important;
+}
+
+#donation .pp-btn {
+    padding: 12px 30px !important;
+    border-radius: 5px !important;
+    font-size: 1.1rem !important;
+    font-weight: bold !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    margin: 10px !important;
+    border: none !important;
+}
+
+body.light-mode #donation .pp-btn {
+    background: var(--main-color) !important;
+    color: white !important;
+}
+
+body.light-mode #donation .pp-btn:hover {
+    background: var(--second-color) !important;
+}
+
+body.dark-mode #donation .pp-btn {
+    background: var(--main-color) !important;
+    color: white !important;
+}
+
+body.dark-mode #donation .pp-btn:hover {
+    background: var(--second-color) !important;
+}
+
+/* Navbar Shadow */
+body.light-mode nav,
+body:not(.dark-mode) nav {
+    box-shadow: none !important;
+}
+
+body.dark-mode nav {
+    box-shadow: none !important;
+}
+
+/* Ensure no shadow on logo and text */
+.logo,
+.logo-container img,
+.menu-link {
+    box-shadow: none !important;
+}
+
+/* RA Racing Text Color */
+body.light-mode .menu-link,
+body:not(.dark-mode) .menu-link {
+    color: var(--main-color) !important;
+    transition: color 0.3s ease !important;
+}
+
+body.dark-mode .menu-link {
+    color: var(--main-color) !important;
+    transition: color 0.3s ease !important;
+}
+
+/* Navbar Menu Items Shadow */
+body.light-mode .menu a,
+body:not(.dark-mode) .menu a {
+    transition: all 0.3s ease !important;
+    box-shadow: none !important;
+}
+
+body.dark-mode .menu a {
+    transition: all 0.3s ease !important;
+    box-shadow: none !important;
+}
+
+/* Section Navigation Buttons Color */
+body.light-mode .menu a,
+body:not(.dark-mode) .menu a {
+    color: black !important;
+    transition: color 0.3s ease !important;
+}
+
+body.light-mode .menu a:hover,
+body:not(.dark-mode) .menu a:hover {
+    color: white !important;
+}
+
+body.dark-mode .menu a {
+    color: white !important;
+    transition: color 0.3s ease !important;
+}
+
+body.dark-mode .menu a:hover {
+    color: black !important;
+}
+
+/* Mobile Menu Theming */
+@media (max-width: 768px) {
+    body.light-mode .menu.active {
+        background: var(--light-gray) !important;
+        transition: background-color 0.3s ease !important;
+    }
+
+    body.dark-mode .menu.active {
+        background: var(--dark-gray) !important;
+        transition: background-color 0.3s ease !important;
+    }
+
+    .menu.active {
+        position: fixed !important;
+        top: 70px !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: calc(100vh - 70px) !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        padding: 20px 0 !important;
+        margin: 0 !important;
+        z-index: 1000 !important;
+        max-width: 100% !important;
+        transition: background-color 0.3s ease !important;
+    }
+}
+
+/* Mobile Menu Toggle Button */
+@media (max-width: 768px) {
+    .toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        height: 70px !important;
+        width: 50px !important;
+        position: relative !important;
+    }
+
+    nav .menu-toggle {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .toggle,
+    .menu-toggle {
+        display: none !important;
+    }
+}
+
+/* Mobile Navbar Layout */
+@media (max-width: 768px) {
+    nav {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 0 5% !important;
+        position: relative !important;
+    }
+
+    nav .logo-container {
+        order: 1 !important;
+        margin-right: auto !important;
+    }
+
+    nav .logo-container img {
+        max-height: 40px !important;
+        width: auto !important;
+    }
+
+    nav .menu-link {
+        order: 2 !important;
+        position: absolute !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .toggle {
+        order: 3 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        position: absolute !important;
+        right: 5% !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        height: 50px !important;
+        width: 40px !important;
+    }
+
+    .toggle .menu-icon {
+        width: 24px !important;
+        height: 24px !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .toggle {
+        display: none !important;
+    }
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 768px) {
+    nav .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .sticky-notes {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .home-text h1 {
+        font-size: 1.8rem;
+    }
+
+    .home-img img {
+        width: 80%;
+    }
+
+    .social a {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* Mobile Navbar Visibility and Positioning */
+@media (max-width: 768px) {
+    nav {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 70px !important;
+        z-index: 1000 !important;
+        background-color: var(--light-gray) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        padding: 0 5% !important;
+    }
+
+    body {
+        padding-top: 70px !important; /* Prevent content from being hidden behind fixed navbar */
+    }
+
+    nav .logo-container {
+        order: 1 !important;
+        margin-right: auto !important;
+    }
+
+    nav .logo-container img {
+        max-height: 40px !important;
+        width: auto !important;
+    }
+
+    nav .menu-link {
+        order: 2 !important;
+        position: absolute !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .toggle {
+        order: 3 !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        position: absolute !important;
+        right: 5% !important;
+        top: 50% !important;
+        transform: translateY(-50%) !important;
+        height: 50px !important;
+        width: 40px !important;
+    }
+
+    .toggle .menu-icon {
+        width: 24px !important;
+        height: 24px !important;
+    }
+
+    /* Dark Mode Navbar */
+    body.dark-mode nav {
+        background-color: var(--dark-gray) !important;
+    }
+}
