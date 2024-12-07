@@ -64,14 +64,20 @@ document.addEventListener('DOMContentLoaded', () => {
         menuIcon.src = isMenuActive ? 'assets/close.png' : 'assets/menu.png';
     }
 
-    // Add event listeners
+    // Add event listeners for mobile menu
     menuToggle?.addEventListener('click', toggleMenu);
     
-    menuItems.forEach(item => {
-        item.addEventListener('click', (e) => {
+    // Handle all anchor links for smooth scrolling
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', (e) => {
             e.preventDefault();
-            toggleMenu();
-            smoothScroll(item.getAttribute('href'));
+            
+            // If it's a menu item, close the mobile menu
+            if (anchor.closest('.menu')) {
+                toggleMenu();
+            }
+            
+            smoothScroll(anchor.getAttribute('href'));
         });
     });
 });
