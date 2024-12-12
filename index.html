@@ -3,26 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RA Racing</title>
+    <title>RA Racing - Professional Motorsports Club in Romania</title>
     
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="RA Racing Club - Join Romania's premier motorsports community. Experience professional racing, training programs, and exclusive motorsport events.">
+    <meta name="keywords" content="RA Racing, motorsports Romania, racing club, professional racing, Romanian motorsports, Darius Chirila">
+    <meta name="author" content="RA Racing">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="RA Racing - Professional Motorsports Club">
+    <meta property="og:description" content="Join Romania's premier motorsports community at RA Racing Club">
+    <meta property="og:image" content="https://raracing.com/assets/home.png">
+    <meta property="og:url" content="https://raracing.com">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="RA Racing Club">
+    <meta name="twitter:description" content="Experience professional racing with Romania's premier motorsports club">
+    <meta name="twitter:image" content="https://raracing.com/assets/home.png">
+    
+    <!-- PWA Support -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#FFA500">
+    
+    <!-- Favicons -->
     <link rel="icon" type="image/png" href="assets/favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="assets/favicon-96x96.png" sizes="96x96">
     <link rel="icon" type="image/png" href="assets/favicon-192x192.png" sizes="192x192">
     <link rel="apple-touch-icon" href="assets/favicon-180x180.png" sizes="180x180">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="theme.css" as="style">
+    <link rel="preload" href="main.js" as="script">
+    <link rel="preload" as="image" href="assets/logop.png">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="theme.css">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <meta name="description" content="Official website of Darius Chirila, professional race car driver">
+    
+    <!-- Scripts -->
     <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SportsOrganization",
+      "name": "RA Racing Club",
+      "url": "https://raracing.com",
+      "logo": "https://raracing.com/assets/logop.png",
+      "sameAs": [
+        "https://www.instagram.com/raracingromania/",
+        "https://www.facebook.com/people/RA-Racing/61569984414608/"
+      ],
+      "description": "Professional motorsports club in Romania offering racing experiences and training programs",
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "Romania"
+      },
+      "member": {
+        "@type": "Person",
+        "name": "Darius Chirila",
+        "jobTitle": "Race Car Driver"
+      }
+    }
+    </script>
 </head>
 <body>
     <nav>
         <div class="logo-container">
             <a href="#home" aria-label="Home">
-                <img src="assets/logop.png" alt="RA Racing Official Logo" class="logo image-fade-in fade-in-element">
+                <img src="assets/logop.png" alt="RA Racing Official Logo" class="logo image-fade-in fade-in-element" loading="eager">
             </a>
             <a href="#home" class="menu-link">RA Racing</a>
             <button class="toggle" aria-label="Toggle Navigation Menu">
-                <img src="assets/menu.png" alt="Menu Toggle" class="menu-icon">
+                <img src="assets/menu.png" alt="Menu Toggle" class="menu-icon" loading="eager">
             </button>
         </div>
         <ul class="menu">
@@ -41,15 +98,15 @@
                 <a href="#about" class="cta-button btn-fade-in fade-in-element">Learn More</a>
             </div>
             <div class="home-img">
-                <img src="assets/home.png" alt="Darius Chirila" class="image-fade-in fade-in-element">
+                <img src="assets/home.png" alt="Darius Chirila - Professional Race Car Driver" class="image-fade-in fade-in-element" loading="eager">
                 <div class="social">
-                    <a href="https://www.instagram.com/raracingromania/" aria-label="Instagram">
+                    <a href="https://www.instagram.com/raracingromania/" aria-label="Follow us on Instagram">
                         <i class="bx bxl-instagram-alt"></i>
                     </a>
-                    <a href="https://www.facebook.com/people/RA-Racing/61569984414608/" aria-label="Facebook">
+                    <a href="https://www.facebook.com/people/RA-Racing/61569984414608/" aria-label="Follow us on Facebook">
                         <i class="bx bxl-facebook"></i>
                     </a>
-                    <a href="mailto:contact@raracing.com" aria-label="Email">
+                    <a href="mailto:contact@raracing.com" aria-label="Contact us via Email">
                         <i class="bx bxs-envelope"></i>
                     </a>
                 </div>
@@ -98,7 +155,7 @@
 
             <div class="about-content">
                 <div class="about-img">
-                    <img src="assets/about.png" alt="Darius Chirila" class="image-fade-in fade-in-element">
+                    <img src="assets/about.png" alt="Darius Chirila - Racing Journey" class="image-fade-in fade-in-element" loading="lazy">
                 </div>
                 <div class="about-text">
                     <h1><span>The Journey So Far</span></h1>
@@ -106,17 +163,17 @@
                         Ever since I was a kid, I dreamed of driving fast cars, and as of last year, I took the plunge. I signed up for a race car driving course, and I was hooked. The experience was mind-blowing, and I realized that I had found my calling.<br>
                     </p>
                     <p>At the beginning of 2023, I took part in the BRSCC Fiesta Junior Scholarship in the UK, which allowed me to understand the world of motorsport and how things work in other countries. Despite not winning it, I learned a lot and became a better driver.</p>
-                    <p>My first race was in March 2023 when I drove around Motorpark Romania. Throughout the season, there were moments of uncertainty, times when I couldn’t see the full picture. But I came across a quote from <i>The Boy, the Mole, the Fox and the Horse</i> by Charlie Mackesy, which resonated with me:</p>
+                    <p>My first race was in March 2023 when I drove around Motorpark Romania. Throughout the season, there were moments of uncertainty, times when I couldn't see the full picture. But I came across a quote from <i>The Boy, the Mole, the Fox and the Horse</i> by Charlie Mackesy, which resonated with me:</p>
 
                     <p><i>"I can't see a way through," said the boy. <br>
                             "Can you see your next step?" <br>
                             "Yes." <br>
                             "Just take that," said the horse.</i></p>
 
-                    <p>It made me realize that I didn’t need to have it all figured out. I just needed to focus on the <i>next step</i>. <br>In my last race of the season and also the most important one, I put aside all my long time future goals and focused on the present moment. After 8 hours of hard racing through tough conditions, I managed to cross the finish line and secure <b>first place</b> in my class.	
+                    <p>It made me realize that I didn't need to have it all figured out. I just needed to focus on the <i>next step</i>. <br>In my last race of the season and also the most important one, I put aside all my long time future goals and focused on the present moment. After 8 hours of hard racing through tough conditions, I managed to cross the finish line and secure <b>first place</b> in my class.	
                         
                         <br><br>That next step is entering the <b><i>Clio Cup</i></b>, an international series that is popular among amateur drivers all across the world. For this, I will need to <i>buy a new car and train even harder</i>, but I will do everything that I can do to succeed in pursuing my dreams.<br>
-                        Now, I’m looking ahead, with the <b><i>World Endurance Championship</i></b> as my ultimate goal. It won’t be easy, but with each race, I’ll be a step closer. As the horse wisely said, I just have to <i>keep moving forward</i>, one step at a time.</p>
+                        Now, I'm looking ahead, with the <b><i>World Endurance Championship</i></b> as my ultimate goal. It won't be easy, but with each race, I'll be a step closer. As the horse wisely said, I just have to <i>keep moving forward</i>, one step at a time.</p>
                 </div>
             </div>
         </section>
@@ -130,10 +187,10 @@
             <div class="donation-content">
                 <form action="https://www.paypal.com/ncp/payment/2CWH2DL5KMPG8" method="post" target="_top" class="paypal-form">
                     <input class="pp-btn" type="submit" value="Donate" />
-                    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="cards" class="paypal-cards image-fade-in fade-in-element" />
+                    <img src="https://www.paypalobjects.com/images/Debit_Credit_APM.svg" alt="Payment Methods Accepted" class="paypal-cards image-fade-in fade-in-element" loading="lazy" />
                 </form>
                 <div class="donation-logo">
-                    <img src="assets/logop.png" alt="RA Racing Logo" class="big-logo image-fade-in fade-in-element">
+                    <img src="assets/logop.png" alt="RA Racing Logo" class="big-logo image-fade-in fade-in-element" loading="lazy">
                 </div>
             </div>
         </section>
@@ -163,8 +220,5 @@
     </footer>
 
     <script src="main.js"></script>
-    <script>
-        // Remove inline script as functionality is in main.js
-    </script>
 </body>
 </html>
